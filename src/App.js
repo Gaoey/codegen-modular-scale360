@@ -23,7 +23,7 @@ class App extends Component {
       URL: '',
       actionName: '',
       actionType: '',
-      method: '',
+      method: 'GET',
       containerName: ''
     }
   }
