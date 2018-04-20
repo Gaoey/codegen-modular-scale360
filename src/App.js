@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { createAction, createActionType, createReducer, createContainer, createIndex, addInReducer } from './AppAction'
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { EditorComponent } from './EditorComponent'
 
 class App extends Component {
@@ -39,30 +40,48 @@ class App extends Component {
       <div>
         <h3 id="index">Index.js // Input in "./index.js" </h3>
         <div>
+          <CopyToClipboard text={createIndexString}>
+            <button style={style.button}>COPY THIS</button>
+          </CopyToClipboard>
           {EditorComponent(createIndexString)}
         </div>
         <hr />
         <h3 id="importReducer">import such thing // Input in "../feature/reducer.js and ../feature/index.js" </h3>
         <div>
+          <CopyToClipboard text={addInReducerString}>
+            <button style={style.button}>COPY THIS</button>
+          </CopyToClipboard>
           {EditorComponent(addInReducerString)}
         </div>
         <h3 id="action">Action // Input in "./xxxAction.js" </h3>
         <div>
+          <CopyToClipboard text={actionString}>
+            <button style={style.button}>COPY THIS</button>
+          </CopyToClipboard>
           {EditorComponent(actionString)}
         </div>
         <hr />
         <div>
+          <CopyToClipboard text={actionTypeString}>
+            <button style={style.button}>COPY THIS</button>
+          </CopyToClipboard>
           <h3 id="actionType">Action Type // Input in "./constants/ActionTypes.js" </h3>
           {EditorComponent(actionTypeString)}
         </div>
         <hr />
         <h3 id="reducer">Reducer // Input in "./xxxReducer.js" </h3>
         <div>
+          <CopyToClipboard text={reducerString}>
+            <button style={style.button}>COPY THIS</button>
+          </CopyToClipboard>
           {EditorComponent(reducerString)}
         </div>
         <hr />
         <h3 id="containerBox">Container // Input in "./xxxContainer.js" </h3>
         <div>
+          <CopyToClipboard text={createContainerString}>
+            <button style={style.button}>COPY THIS</button>
+          </CopyToClipboard>
           {EditorComponent(createContainerString)}
         </div>
         <hr />
