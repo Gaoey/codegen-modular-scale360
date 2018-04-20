@@ -62,10 +62,10 @@ class App extends Component {
         </div>
         <hr />
         <div>
+          <h3 id="actionType">Action Type // Input in "./constants/ActionTypes.js" </h3>
           <CopyToClipboard text={actionTypeString}>
             <button style={style.button}>COPY THIS</button>
           </CopyToClipboard>
-          <h3 id="actionType">Action Type // Input in "./constants/ActionTypes.js" </h3>
           {EditorComponent(actionTypeString)}
         </div>
         <hr />
