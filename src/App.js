@@ -138,7 +138,12 @@ class App extends Component {
             <span>ActionType</span> <span><input type="text" id="action-type" value={this.state.actionType} onChange={evt => this.updateInputValueActionType(evt)} /></span>
           </div>
           <div>
-            <span>Method</span> <span><input type="text" id="method" value={this.state.method} onChange={evt => this.updateInputValueMethod(evt)} /></span>
+            <span>Method</span>
+            <select id="method" value={this.state.method} onChange={evt => this.updateInputValueMethod(evt)}>
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+              <option value="PUT">PUT</option>
+            </select>
           </div>
           <div>
             <span>URL</span> <span><input type="text" value={this.state.URL} onChange={evt => this.updateInputValueUrl(evt)} /></span>
